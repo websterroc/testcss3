@@ -1,0 +1,122 @@
+html{
+  padding:0;
+  margin:0;
+}
+
+#background{
+  background:url(../img/sky_02.png);
+  width:1035px;
+  height:268px;
+  margin:0 auto;
+}
+
+#clouds{
+  background:url(../img/cloud_02.png) repeat-x;
+  height:268px;
+  width: 1035px;
+  
+  -webkit-animation: landscape 120s infinite linear;
+  animation: landscape 120s infinite linear;
+  
+}
+
+#horizont{
+  background:url(../img/horizont_02.png) repeat-x;
+  width:1035px;
+  height:268px;
+  -webkit-animation: landscape 90s infinite linear;
+  animation: landscape 90s infinite linear;
+}
+
+#horizont1{
+  background:url(../img/horizont_01.png) repeat-x;
+  width:1035px;
+  height:268px;
+  -webkit-animation: landscape 45s infinite linear;
+  animation: landscape 45s infinite linear;
+}
+
+#light{
+  background:url(../img/light.png) repeat-x;
+  width:1035px;
+  height:268px;
+  position:absolute;
+  
+  -webkit-animation: landscape 5s infinite linear;
+  animation: landscape 5s infinite linear;
+}
+
+#car, #body{
+  position:absolute;
+  width:420px;
+  height:120px;
+  top:156px;
+  left:600px;
+}
+
+#car {
+  background:url(../img/trailer_02.png);
+  background-repeat:no-repeat;
+}
+#body {
+  background:url(../img/trailer_01.png);
+  background-repeat:no-repeat;
+}
+
+[id*="wheel"]{
+  position:absolute;
+  background:url(../img/wheel.png);
+  background-repeat:no-repeat;
+  width:52px;
+  height:52px;
+  bottom:0;
+  
+  -webkit-animation: rotatewheel 1s infinite reverse linear;
+  animation: rotatewheel 1s infinite reverse linear;
+}
+
+#wheel1{
+left:36px;
+
+}
+
+#wheel2{
+left:290px;
+}
+
+/*animation*/
+@-webkit-keyframes landscape
+{
+  from {background-position: 0px 0;}
+  to {background-position: 1035px 0;}
+}
+
+@keyframes landscape
+{
+  from {background-position: 0px 0;}
+  to {background-position: 1035px 0;}
+}
+
+@-webkit-keyframes rotatewheel
+{
+  from {transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+@keyframes rotatewheel
+{
+  from {transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+@-webkit-keyframes carscale
+{
+  from {transform:scaleY(1);}
+  to {transform:scaleY(0.97);}
+}
+
+@keyframes carscale
+{
+  from {transform:scaleY(1);}
+  to {transform:scaleY(0.97);}
+}
